@@ -1,8 +1,10 @@
 // Find body mass index value (BMI) with this endpoint.
 //  You just need to enter three parameters which are age, weight (kg), and height(cm) information.
-
+import React, { useEffect, useState} from 'react';
+import { Box, Stack, Typography, TextField, Button } from '@mui/material';
+import { fetchData, BMIOptions } from '../utils/fetchData';
 // url with
-// const BMICalUrl = 'https://fitness-calculator.p.rapidapi.com/bmi?age=25&weight=65&height=180';
+const BMICalUrl = 'https://fitness-calculator.p.rapidapi.com/bmi?age=25&weight=65&height=180';
 
 // {3 items
 //     "status_code":200
@@ -14,9 +16,6 @@
 //     }
 // }
 
-import React, { useEffect, useState} from 'react';
-import { Box, Stack, Typography, TextField, Button } from '@mui/material';
-import { fetchData, BMIOptions } from '../utils/fetchData';
 
 
 const BmiCalculator = () => {    
